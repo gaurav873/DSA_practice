@@ -1,0 +1,5 @@
+db.cars.aggregate([
+    {$match:{maker:"Hyundai"}},
+    {$group:{_id:"fuel_type",
+    total_Cars:{$sum:1}}}
+]
